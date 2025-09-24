@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SikkimInteractiveMap from "./MapComponent";
 
 const Landing_page = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -297,120 +298,7 @@ const Landing_page = () => {
 
       {/* map */}
 
-      <section
-        id="map"
-        className="lg:h-[90vh] h-[50vh] bg-white w-full flex flex-row justify-center items-center  overflow-hidden"
-      >
-        <div className="w-[80%] h-[90%] bg-white  flex flex-col justify-center items-center relative">
-          <div className='lg:w-[550px] lg:h-[550px] w-[250px] h-[250px] bg-[url("/sikkim_map.png")] bg-cover bg-top rounded-[50%]'></div>
-
-          {/* location pin card */}
-          <div className="lg:w-[30%] lg:h-[12%] w-[60%] h-[10%] bg-blue-300 absolute lg:left-[2%] lg:bottom-[60%] bottom-[70%] left-[-10%] rounded-[5px] flex flex-row items-center justify-evenly">
-            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
-            <div className="w-[65%] h-[90%]  flex flex-col justify-evenly">
-              <h1 className="lg:text-[1.2rem] text-[10px] font-bold">Rumtek Monastery</h1>
-              <p className="lg:text-[12px] text-[8px]">📍 Location: Gangtok, East Sikkim</p>
-            </div>
-          </div>
-          <div className="lg:w-[30%] lg:h-[12%] w-[60%] h-[10%] bg-blue-300 absolute lg:left-[10%] lg:bottom-[15%] left-[-5%] bottom-[10%] rounded-[5px] flex flex-row items-center justify-evenly">
-            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
-            <div className="w-[65%] h-[90%]  flex flex-col justify-evenly">
-              <h1 className="lg:text-[1.2rem] text-[10px] font-bold">Enchey Monastery</h1>
-              <p className="lg:text-[12px] text-[8px]">📍 Location: Gangtok, East Sikkim</p>
-            </div>
-          </div>
-          <div className="lg:w-[30%] lg:h-[12%] w-[60%] h-[10%] bg-blue-300 absolute lg:right-[5%] lg:top-[24%]  top-[25%] right-[-20%] rounded-[5px] flex flex-row items-center justify-evenly">
-            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
-            <div className="w-[65%] h-[90%]  flex flex-col">
-              <h1 className="lg:text-[1.2rem] text-[10px] font-bold mb-0 mt-1">
-                Pemayangtse Monastery
-              </h1>
-              <p className="lg:text-[12px] text-[8px]">📍 Location: Pelling, West Sikkim</p>
-            </div>
-          </div>
-          <div className="lg:w-[30%] lg:h-[12%] w-[65%] h-[10%] bg-blue-300 absolute lg:right-[10%] lg:bottom-[20%] right-[-15%] bottom-[25%] rounded-[5px] flex felx-row items-center justify-evenly">
-            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
-            <div className="w-[65%] h-[90%]  flex flex-col justify-evenly">
-              <h1 className="lg:text-[1.2rem] text-[10px] font-bold mb-0 mt-1">
-                {" "}
-                Tashiding Monastery
-              </h1>
-              <p className="lg:text-[12px] text-[7px]">
-                📍 Location: Near Yuksom, West Sikkim
-              </p>
-            </div>
-          </div>
-
-          {/* airplane */}
-          <div className='lg:w-[250px] lg:h-[140px] w-[100px] h-[70px] bg-[url("/airplane.png")] bg-cover bg-center absolute right-[40%] lg:bottom-[65%] bottom-[60%]'></div>
-        </div>
-
-        <div className="hidden lg:w-[20%] lg:h-[90%] bg-blue-300 rounded-[10px] lg:flex flex-col items-center justify-center gap-4">
-          <h1 className="text-[1.7rem] font-bold ">Tourist Attractions</h1>
-
-          <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
-            <div className="w-[40px] h-[40px] rounded-[50%] bg-yellow-300 text-[1.2rem] flex items-center justify-center">
-              1
-            </div>
-            <div className="w-[60%] h-[90%] flex flex-col justify-evenly">
-              <h1 className="text-[1.1rem] font-bold">Nathula Pass</h1>
-              <p className="text-[12px]">📍 Gangtok, East Sikkim</p>
-            </div>
-          </div>
-
-          <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
-            <div className="w-[40px] h-[40px] rounded-[50%] bg-yellow-300 text-[1.2rem] flex items-center justify-center">
-              2
-            </div>
-            <div className="w-[60%] h-[90%] flex flex-col justify-evenly">
-              <h1 className="text-[1.1rem] font-bold">Buddha Park</h1>
-              <p className="text-[12px]">📍 Location: Yuksom, Sikkim</p>
-            </div>
-          </div>
-
-          <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
-            <div className="w-[40px] h-[40px] rounded-[50%] bg-yellow-300 text-[1.2rem] flex items-center justify-center">
-              3
-            </div>
-            <div className="w-[70%] h-[90%] flex flex-col justify-evenly">
-              <h1 className="text-[1.1rem] font-bold">Yumthang Valley</h1>
-              <p className="text-[12px]">📍 Location: Near Yuksom, Sikkim</p>
-            </div>
-          </div>
-
-          <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
-            <div className="w-[40px] h-[40px] rounded-[50%] bg-yellow-300 text-[1.2rem] flex items-center justify-center">
-              4
-            </div>
-            <div className="w-[70%] h-[90%] flex flex-col justify-evenly">
-              <h1 className="text-[1.1rem] font-bold">Zero Point</h1>
-              <p className="text-[12px]">📍 Location: Gangtok, East Sikkim</p>
-            </div>
-          </div>
-
-          <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
-            <div className="w-[40px] h-[40px] rounded-[50%] bg-yellow-300 text-[1.2rem] flex items-center justify-center">
-              5
-            </div>
-            <div className="w-[70%] h-[90%] flex flex-col justify-evenly">
-              <h1 className="text-[1.1rem] font-bold">Tsomgo Lake</h1>
-              <p className="text-[12px]">📍 Location: Ravangla, Sikkim</p>
-            </div>
-          </div>
-
-          <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
-            <div className="w-[40px] h-[40px] rounded-[50%] bg-yellow-300 text-[1.2rem] flex items-center justify-center">
-              6
-            </div>
-            <div>
-              <h1 className="text-[1.1rem] font-bold">Char Dham</h1>
-              <p className="text-[12px]">📍 Location: Phodong, North Sikkim</p>
-            </div>
-          </div>
-
-         
-        </div>
-      </section>
+      <SikkimInteractiveMap/>
 
       {/* footer */}
        <section

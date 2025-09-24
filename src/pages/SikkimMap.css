@@ -1,0 +1,48 @@
+@import 'leaflet/dist/leaflet.css';
+
+.monastery-popup .leaflet-popup-content-wrapper {
+  background-color: #333;
+  color: #eee;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  font-family: 'Inter', sans-serif;
+}
+
+.monastery-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+}
+
+.monastery-popup h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.monastery-popup p {
+  margin: 0;
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+.monastery-popup img {
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.monastery-popup .leaflet-popup-tip {
+  background-color: #333;
+}
+
+.active-sidebar-item {
+  background-color: #fefcbf !important;
+  border: 2px solid #fbbf24 !important;
+}
